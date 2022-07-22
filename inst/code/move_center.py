@@ -1,5 +1,5 @@
 import pandas as pd
-
+import os
 dir_root = os.getcwd()
 
 #parameter_settings_f=pd.read_csv(dir_root+'/data/parameter_settings.csv')

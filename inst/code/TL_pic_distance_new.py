@@ -3,6 +3,7 @@ import pandas as pd
 from rich.progress import track
 from pathlib import Path
 import warnings
+import os
 warnings.filterwarnings("ignore")
 dir_root = os.getcwd()
 TILE_PATH = Path(dir_root+"/data/intermediate_result")

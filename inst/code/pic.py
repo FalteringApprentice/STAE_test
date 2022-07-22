@@ -4,6 +4,7 @@ import networkx as nx
 import scanpy as sc
 import sys
 import warnings
+import os
 warnings.filterwarnings("ignore")
 dir_root = os.getcwd()
 
