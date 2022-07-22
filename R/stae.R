@@ -86,8 +86,10 @@ call_python_program<-function(pyname){
 #'@param asd after_sc_data
 #'@param mg marker_gene
 #'@param pse pseudotime
+#'@import data.table
 #'@export
 data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
+  library(data.table)
   before_iterative_mapping_result <- bimr
   after_iterative_mapping_result <- aimr
   before_sc_data <- bsd
@@ -98,12 +100,18 @@ data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
   if(!dir.exists(data_path)){
     dir.create(data_path)
   }
-  write.csv(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
-  write.csv(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
-  write.csv(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = ''))
-  write.csv(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  write.csv(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
-  write.csv(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
+  # write.csv(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
+  # write.csv(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
+  # write.csv(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = ''))
+  # write.csv(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
+  # write.csv(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
+  # write.csv(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
+  fwrite(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
+  fwrite(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
+  fwrite(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = ''))
+  fwrite(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
+  fwrite(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
+  fwrite(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
 }
 #'@title stae_main 
 #'@description main programe
