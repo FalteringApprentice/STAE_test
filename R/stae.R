@@ -106,12 +106,12 @@ data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
   # write.csv(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
   # write.csv(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
   # write.csv(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
-  fwrite(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
-  fwrite(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
-  fwrite(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = ''))
-  fwrite(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  fwrite(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
-  fwrite(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
+  system.time(fwrite(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = '')))
+  system.time(fwrite(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = '')))
+  system.time(fwrite(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = '')))
+  system.time(fwrite(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = '')))
+  system.time(fwrite(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = '')))
+  system.time(fwrite(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = '')))
 }
 #'@title stae_main 
 #'@description main programe
