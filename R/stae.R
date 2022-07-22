@@ -100,18 +100,18 @@ data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
   if(!dir.exists(data_path)){
     dir.create(data_path)
   }
-  # write.csv(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
-  # write.csv(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
-  # write.csv(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = ''))
-  # write.csv(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  # write.csv(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
-  # write.csv(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
-  print(system.time(fwrite(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))))
-  print(system.time(fwrite(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))))
-  print(system.time(fwrite(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))))
-  print(system.time(fwrite(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))))
-  print(system.time(fwrite(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))))
-  print(system.time(fwrite(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))))
+  write.csv(before_iterative_mapping_result,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
+  write.csv(after_iterative_mapping_result,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
+  write.csv(before_sc_data,file = paste(data_path,'/before_sc_data.csv',sep = ''))
+  write.csv(after_sc_data,file = paste(data_path,'/after_sc_data.csv',sep = ''))
+  write.csv(marker_gene,file = paste(data_path,'/marker_gene.csv',sep = ''))
+  write.csv(pseudotime,file = paste(data_path,'/pseudotime.csv',sep = ''))
+  # print(system.time(fwrite(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))))
+  # print(system.time(fwrite(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))))
+  # print(system.time(fwrite(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))))
+  # print(system.time(fwrite(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))))
+  # print(system.time(fwrite(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))))
+  # print(system.time(fwrite(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))))
 }
 #'@title stae_main 
 #'@description main programe
