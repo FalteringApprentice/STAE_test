@@ -61,6 +61,7 @@ env_test<-function(){
 #'Cell Columns is the specified column name
 #'@param pdr position_distance_ratio
 #'@param dam Differentiation and migration of cell type
+#'@export
 Parameter_settings<-function(pdr,dam){
   parameter_settings_csv<-c(pdr,dam)
   dir=packages_path()
@@ -69,6 +70,7 @@ Parameter_settings<-function(pdr,dam){
 }
 
 #'@import reticulate
+#'@export
 call_python_program<-function(pyname){
   #package_path<-c('E:/work/sunhang/code/package_0708')
   package_path_dir <- packages_path()
@@ -100,18 +102,18 @@ data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
   if(!dir.exists(data_path)){
     dir.create(data_path)
   }
-  write.csv(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
-  write.csv(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
-  write.csv(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))
-  write.csv(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  write.csv(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))
-  write.csv(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))
-  # print(system.time(fwrite(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))))
-  # print(system.time(fwrite(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))))
-  # print(system.time(fwrite(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))))
-  # print(system.time(fwrite(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))))
-  # print(system.time(fwrite(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))))
-  # print(system.time(fwrite(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))))
+  # write.csv(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
+  # write.csv(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
+  # write.csv(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))
+  # write.csv(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))
+  # write.csv(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))
+  # write.csv(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))
+  print(system.time(fwrite(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))))
+  print(system.time(fwrite(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))))
+  print(system.time(fwrite(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))))
+  print(system.time(fwrite(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))))
+  print(system.time(fwrite(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))))
+  print(system.time(fwrite(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))))
 }
 #'@title stae_main 
 #'@description main programe
