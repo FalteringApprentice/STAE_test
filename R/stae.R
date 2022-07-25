@@ -38,7 +38,8 @@ env_test<-function(){
                     'anndata',
                     'torch',
                     'scipy',
-                    'rich'
+                    'rich',
+                    'kaleido'
                     )
   for(package_name in package_detect){
     if(!py_module_available(package_name)){
