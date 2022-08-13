@@ -15,8 +15,6 @@ data_deal(bimr, aimr, bsd, asd, mg, pse = NA)
 
 \item{asd}{after_sc_data}
 
-\item{mg}{marker_gene}
-
 \item{pse}{pseudotime}
 }
 \description{

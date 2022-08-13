@@ -88,7 +88,6 @@ call_python_program<-function(pyname){
 #'@param aimr after_iterative_mapping_result
 #'@param bsd before_sc_data
 #'@param asd after_sc_data
-#'@param mg marker_gene
 #'@param pse pseudotime
 #'@import data.table
 #'@export
@@ -104,18 +103,10 @@ data_deal<-function(bimr,aimr,bsd,asd,mg,pse = NA){
   if(!dir.exists(data_path)){
     dir.create(data_path)
   }
-  # write.csv(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
-  # write.csv(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
-  # write.csv(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))
-  # write.csv(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  # write.csv(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))
-  # write.csv(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))
   fwrite(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
   fwrite(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
   fwrite(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))
   fwrite(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  #this is need Filter empty text
-  fwrite(mg,file = paste(data_path,'/marker_gene.csv',sep = ''))
   if(!is.null(pse)){
     fwrite(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))
   }
