@@ -91,7 +91,7 @@ call_python_program<-function(pyname){
 #'@param pse pseudotime
 #'@import data.table
 #'@export
-data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
+data_deal<-function(bimr,aimr,bsd,asd,pse){
   library(data.table)
   # before_iterative_mapping_result <- bimr
   # after_iterative_mapping_result <- aimr
