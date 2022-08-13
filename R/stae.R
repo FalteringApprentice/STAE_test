@@ -65,7 +65,7 @@ env_test<-function(){
 #' @param pseflag Whether there is pseudo-temporal data(True/False) : True
 #'@export
 Parameter_settings<-function(pdr,pseflag){
-  parameter_settings_csv<-c(pdr,pseudoflag)
+  parameter_settings_csv<-c(pdr,pseflag)
   dir=packages_path()
   parameter_settings_path = paste(dir,"/data/parameter_settings.csv",sep="")
   write.table(parameter_settings_csv,file = parameter_settings_path,row.names = FALSE,col.names = 'parameter')
