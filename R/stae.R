@@ -64,8 +64,8 @@ env_test<-function(){
 #'@param dam Differentiation and migration of cell type
 #' @param pseflag Whether there is pseudo-temporal data(True/False) : True
 #'@export
-Parameter_settings<-function(pdr,dam,pseflag = TRUE){
-  parameter_settings_csv<-c(pdr,dam,pseudoflag)
+Parameter_settings<-function(pdr,pseflag){
+  parameter_settings_csv<-c(pdr,pseudoflag)
   dir=packages_path()
   parameter_settings_path = paste(dir,"/data/parameter_settings.csv",sep="")
   write.table(parameter_settings_csv,file = parameter_settings_path,row.names = FALSE,col.names = 'parameter')
@@ -112,8 +112,8 @@ data_deal<-function(bimr,aimr,bsd,asd,pse){
 #'@title stae_main 
 #'@description main programe
 #'@export
-stae <- function(pdr){
-  Parameter_settings(pdr = pdr)
+stae <- function(pdr,pseflag = FALSE){
+  Parameter_settings(pdr = pdr,pseflag = pseflag)
   call_python_program('move_center')
   call_python_program('TL_pic_distance_new')
   call_python_program('TL_sample_get_adata')
