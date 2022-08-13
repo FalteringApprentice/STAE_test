@@ -5,12 +5,14 @@
 \title{parameter_setting
 Hyperparameter setting}
 \usage{
-Parameter_settings(pdr, dam)
+Parameter_settings(pdr, dam, pseflag = TRUE)
 }
 \arguments{
 \item{pdr}{position_distance_ratio}
 
 \item{dam}{Differentiation and migration of cell type}
+
+\item{pseflag}{Whether there is pseudo-temporal data(True/False) : True}
 }
 \description{
 Set Resolution and Cell Columns,resolution is the multiple of program amplification,
