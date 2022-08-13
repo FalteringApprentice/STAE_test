@@ -91,7 +91,7 @@ call_python_program<-function(pyname){
 #'@param pse pseudotime
 #'@import data.table
 #'@export
-data_deal<-function(bimr,aimr,bsd,asd,mg,pse = NA){
+data_deal<-function(bimr,aimr,bsd,asd,mg,pse){
   library(data.table)
   # before_iterative_mapping_result <- bimr
   # after_iterative_mapping_result <- aimr
@@ -103,13 +103,11 @@ data_deal<-function(bimr,aimr,bsd,asd,mg,pse = NA){
   if(!dir.exists(data_path)){
     dir.create(data_path)
   }
-  fwrite(bimr,file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
-  fwrite(aimr,file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
-  fwrite(bsd,file = paste(data_path,'/before_sc_data.csv',sep = ''))
-  fwrite(asd,file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  if(!is.null(pse)){
-    fwrite(pse,file = paste(data_path,'/pseudotime.csv',sep = ''))
-  }
+  fwrite(as.data.frame(bimr),file = paste(data_path,'/before_iterative_mapping_result.csv',sep = ''))
+  fwrite(as.data.frame(aimr),file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
+  fwrite(as.data.frame(bsd),file = paste(data_path,'/before_sc_data.csv',sep = ''))
+  fwrite(as.data.frame(asd),file = paste(data_path,'/after_sc_data.csv',sep = ''))
+  fwrite(as.data.frame(pse),file = paste(data_path,'/pseudotime.csv',sep = ''))
 }
 #'@title stae_main 
 #'@description main programe

@@ -4,7 +4,7 @@
 \alias{data_deal}
 \title{data_deal}
 \usage{
-data_deal(bimr, aimr, bsd, asd, mg, pse = NA)
+data_deal(bimr, aimr, bsd, asd, mg, pse)
 }
 \arguments{
 \item{bimr}{before_iterative_mapping_result}
