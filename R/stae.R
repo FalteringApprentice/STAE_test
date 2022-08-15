@@ -127,7 +127,7 @@ stae <- function(pdr,pseflag = FALSE){
 #' @description draw result
 #' @export
 stae_draw <- function(dam){
-  Parameter_settings(pdr = dam)
+  Parameter_settings(pdr = dam,pseflag = FALSE)
   call_python_program('pic')
   print(paste(packages_path(),'/data/result/3D.html',sep = ""))
 }
