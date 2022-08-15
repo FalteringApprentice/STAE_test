@@ -15,7 +15,7 @@ parameter_settings_f=pd.read_csv(dir_root+'/data/parameter_settings.csv')
 #ratio= sys.argv[1]
 ratio = float(parameter_settings_f['parameter'][0])
 ratio = float(ratio)
-pseudo_time_tag = parameter_settings_f['parameter'][2]
+pseudo_time_tag = parameter_settings_f['parameter'][1]
 
 # ratio= sys.argv[1]
 # pseudo_time_tag = sys.argv[2]
