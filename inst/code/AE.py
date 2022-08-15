@@ -6,7 +6,11 @@ import numpy as np
 import scanpy as sc
 from sklearn.preprocessing import MinMaxScaler
 from scipy.spatial.distance import pdist, squareform
+import os
 dir_root = os.getcwd()
+print(dir_root)
+
+
 class AutoEncoder(nn.Module):
     def __init__(self,n_feature,n_hidden_1, n_hidden_2,n_output):
         super(AutoEncoder,self).__init__()
