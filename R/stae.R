@@ -107,12 +107,8 @@ data_deal<-function(bimr,aimr,bsd,asd,pse = 1){
   fwrite(as.data.frame(aimr),file = paste(data_path,'/after_iterative_mapping_result.csv',sep = ''))
   fwrite(as.data.frame(bsd),file = paste(data_path,'/before_sc_data.csv',sep = ''))
   fwrite(as.data.frame(asd),file = paste(data_path,'/after_sc_data.csv',sep = ''))
-  if(pse == 1){
-    print("Pseudo time file default")
-  }
-  else{
-    fwrite(as.data.frame(pse),file = paste(data_path,'/pseudotime.csv',sep = ''))
-  }
+  fwrite(as.data.frame(pse),file = paste(data_path,'/pseudotime.csv',sep = ''))
+  
 }
 #'@title stae_main 
 #'@description main programe
