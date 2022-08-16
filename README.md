@@ -52,14 +52,14 @@ library('STAE')
 help(package = 'STAE')
 
 #set the py conda
-env_python_set("D:/anaconda/envs/testconda")
+setPythonEnv("D:/anaconda/envs/testconda")
 
 #Check the dependent environment for the program to run, and automatically install the missing python package
-env_test()
+testEnv()
 ```
 ### Data_deal
 ```
-data_deal(bimr,aimr,bsd,asd,mg,pse)  
+dataProcessing(bimr,aimr,bsd,asd,mg,pse)  
 
 #If you don't have a pse file please pass in an empty data frame
 pse <- as.data.frame(matrix(nrow=0,ncol=3))
@@ -77,6 +77,6 @@ stae(pdr,pseflag)
 ```
 #Differentiation and migration of cell type
 dam = c('Nb2') 
-stae_draw(dam)
+staePlot(dam)
 ```
 ![STAE_example](image/stae_example.png)
